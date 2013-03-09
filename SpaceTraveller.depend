@@ -1,0 +1,749 @@
+# depslib dependency file v1.0
+1326989970 source:c:\projects\spacetraveller\main.cpp
+	"Window.h"
+	"Graphics.h"
+	"Application.h"
+
+1327861248 c:\projects\spacetraveller\window.h
+	"Prerequisites.h"
+	"KeyEventProcessor.h"
+
+1319558459 c:\projects\spacetraveller\prerequisites.h
+	<cmath>
+	<cassert>
+	<stdexcept>
+	<cstdarg>
+	<cwchar>
+	<sstream>
+	<iostream>
+	<iomanip>
+	<string>
+	<vector>
+	<fstream>
+	<windows.h>
+
+1327881102 source:c:\projects\spacetraveller\window.cpp
+	"Window.h"
+
+1321984849 c:\projects\spacetraveller\glrenderer.h
+	"Prerequisites.h"
+	"Log.h"
+	"Shader.h"
+	"OpenGL.h"
+	"Window.h"
+	"Timer.h"
+	"Math/Vector3D.h"
+	"Math/Matrix3D.h"
+
+1322388832 source:c:\projects\spacetraveller\glrenderer.cpp
+	"GLRenderer.h"
+
+1317405810 source:c:\projects\spacetraveller\log.cpp
+	"Log.h"
+
+1318431168 c:\projects\spacetraveller\log.h
+	"Prerequisites.h"
+
+1321461953 source:c:\projects\spacetraveller\opengl.cpp
+	"OpenGL.h"
+
+1326989970 c:\projects\spacetraveller\opengl.h
+	<windows.h>
+	<GL/gl.h>
+	"GL/glext.h"
+	"GL/wglext.h"
+	"Log.h"
+
+1304873130 c:\projects\spacetraveller\gl\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1304185023 c:\projects\spacetraveller\gl\wglext.h
+	<windows.h>
+
+1321462062 source:c:\projects\spacetraveller\shader.cpp
+	"Shader.h"
+
+1321460632 c:\projects\spacetraveller\shader.h
+	"OpenGL.h"
+	"Prerequisites.h"
+
+1327857965 source:c:\projects\spacetraveller\math\vector2d.cpp
+	"Vector2D.h"
+
+1327857879 c:\projects\spacetraveller\math\vector2d.h
+	<cmath>
+	<cassert>
+	<ostream>
+
+1321984599 source:c:\projects\spacetraveller\math\matrix2d.cpp
+	"Matrix2D.h"
+
+1321984555 c:\projects\spacetraveller\math\matrix2d.h
+	"Vector2D.h"
+
+1320146043 source:c:\projects\spacetraveller\timer.cpp
+	"Timer.h"
+
+1320146027 c:\projects\spacetraveller\timer.h
+	<windows.h>
+
+1327857865 c:\projects\spacetraveller\math\vector3d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+
+1322388983 c:\projects\spacetraveller\math\matrix3d.h
+	"Vector3D.h"
+
+1322388858 source:c:\projects\spacetraveller\math\matrix3d.cpp
+	"Matrix3D.h"
+
+1327857980 source:c:\projects\spacetraveller\math\vector3d.cpp
+	"Vector3D.h"
+
+1327857997 source:c:\projects\spacetraveller\math\vector4d.cpp
+	"Vector4D.h"
+
+1327857835 c:\projects\spacetraveller\math\vector4d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+	"Vector3D.h"
+
+1326989970 c:\projects\spacetraveller\keyeventprocessor.h
+
+1327869406 source:c:\projects\spacetraveller\application.cpp
+	"Application.h"
+
+1327869372 c:\projects\spacetraveller\application.h
+	<string>
+	"Graphics.h"
+	"KeyEventProcessor.h"
+
+1327870218 c:\projects\spacetraveller\graphics.h
+	"Prerequisites.h"
+	"Log.h"
+	"Shader.h"
+	"OpenGL.h"
+	"Window.h"
+	"Timer.h"
+	"Math/Vector3D.h"
+	"Math/Matrix3D.h"
+	"Math/Matrix4D.h"
+	"Mesh.h"
+
+1327881681 source:c:\projects\spacetraveller\graphics.cpp
+	"Graphics.h"
+
+1327880779 source:c:\projects\spacetraveller\math\matrix4d.cpp
+	<iostream>
+	"Matrix4D.h"
+
+1327879427 c:\projects\spacetraveller\math\matrix4d.h
+	"Vector4D.h"
+
+1327880034 c:\projects\spacetraveller\mesh.h
+	"math/Vector3D.h"
+
+1327880027 source:c:\projects\spacetraveller\mesh.cpp
+	"Mesh.h"
+
+1338157430 source:c:\skeletalanimation\spacetraveller\application.cpp
+	"Application.h"
+
+1338066068 c:\skeletalanimation\spacetraveller\application.h
+	<string>
+	"Graphics.h"
+	"KeyEventProcessor.h"
+	"math/Utility.h"
+	"Timer.h"
+
+1338173620 c:\skeletalanimation\spacetraveller\graphics.h
+	"Prerequisites.h"
+	"Log.h"
+	"Shader.h"
+	"OpenGL.h"
+	"Window.h"
+	"Timer.h"
+	"Math/Utility.h"
+	"Math/Vector3D.h"
+	"Math/Matrix3D.h"
+	"Math/Matrix4D.h"
+	"Mesh.h"
+	"MD5Model.h"
+
+1338067303 c:\skeletalanimation\spacetraveller\prerequisites.h
+	<cmath>
+	<cassert>
+	<stdexcept>
+	<cstdarg>
+	<cwchar>
+	<sstream>
+	<fstream>
+	<iostream>
+	<iomanip>
+	<string>
+	<list>
+	<vector>
+	<windows.h>
+
+1318431168 c:\skeletalanimation\spacetraveller\log.h
+	"Prerequisites.h"
+
+1321460632 c:\skeletalanimation\spacetraveller\shader.h
+	"OpenGL.h"
+	"Prerequisites.h"
+
+1335900306 c:\skeletalanimation\spacetraveller\opengl.h
+	<windows.h>
+	<GL/gl.h>
+	"GL/glext.h"
+	"GL/wglext.h"
+	"Log.h"
+
+1304873130 c:\skeletalanimation\spacetraveller\gl\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1304185023 c:\skeletalanimation\spacetraveller\gl\wglext.h
+	<windows.h>
+
+1338067683 c:\skeletalanimation\spacetraveller\window.h
+	"Prerequisites.h"
+	"KeyEventProcessor.h"
+
+1338066052 c:\skeletalanimation\spacetraveller\keyeventprocessor.h
+	<string>
+
+1320146027 c:\skeletalanimation\spacetraveller\timer.h
+	<windows.h>
+
+1336948474 c:\skeletalanimation\spacetraveller\math\vector3d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+
+1327857879 c:\skeletalanimation\spacetraveller\math\vector2d.h
+	<cmath>
+	<cassert>
+	<ostream>
+
+1333890590 c:\skeletalanimation\spacetraveller\math\matrix3d.h
+	"Vector3D.h"
+
+1335816218 c:\skeletalanimation\spacetraveller\math\matrix4d.h
+	"Vector4D.h"
+
+1327857835 c:\skeletalanimation\spacetraveller\math\vector4d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+	"Vector3D.h"
+
+1327880034 c:\skeletalanimation\spacetraveller\mesh.h
+	"math/Vector3D.h"
+
+1338072123 source:c:\skeletalanimation\spacetraveller\graphics.cpp
+	"Graphics.h"
+
+1337114519 source:c:\skeletalanimation\spacetraveller\log.cpp
+	"Log.h"
+
+1327880027 source:c:\skeletalanimation\spacetraveller\mesh.cpp
+	"Mesh.h"
+
+1335900300 source:c:\skeletalanimation\spacetraveller\opengl.cpp
+	"OpenGL.h"
+
+1321462062 source:c:\skeletalanimation\spacetraveller\shader.cpp
+	"Shader.h"
+
+1320146043 source:c:\skeletalanimation\spacetraveller\timer.cpp
+	"Timer.h"
+
+1338072659 source:c:\skeletalanimation\spacetraveller\window.cpp
+	"Window.h"
+
+1338067704 source:c:\skeletalanimation\spacetraveller\main.cpp
+	"Window.h"
+	"Graphics.h"
+	"Application.h"
+
+1321984599 source:c:\skeletalanimation\spacetraveller\math\matrix2d.cpp
+	"Matrix2D.h"
+
+1321984555 c:\skeletalanimation\spacetraveller\math\matrix2d.h
+	"Vector2D.h"
+
+1322388858 source:c:\skeletalanimation\spacetraveller\math\matrix3d.cpp
+	"Matrix3D.h"
+
+1336411428 source:c:\skeletalanimation\spacetraveller\math\matrix4d.cpp
+	<iostream>
+	"Matrix4D.h"
+
+1335709045 source:c:\skeletalanimation\spacetraveller\math\vector2d.cpp
+	"Vector2D.h"
+
+1336948464 source:c:\skeletalanimation\spacetraveller\math\vector3d.cpp
+	"Vector3D.h"
+
+1335709062 source:c:\skeletalanimation\spacetraveller\math\vector4d.cpp
+	"Vector4D.h"
+
+1336954870 c:\skeletalanimation\spacetraveller\math\quaternion.h
+	<cmath>
+	<iostream>
+	"Vector3D.h"
+
+1336954960 source:c:\skeletalanimation\spacetraveller\math\quaternion.cpp
+	"Quaternion.h"
+
+1338073032 c:\skeletalanimation\spacetraveller\md5model.h
+	"MD5Animation.h"
+	"Prerequisites.h"
+	"OpenGL.h"
+	"Shader.h"
+	"math/Matrix4D.h"
+	"math/Vector2D.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1338169862 source:c:\skeletalanimation\spacetraveller\md5model.cpp
+	"Log.h"
+	"MD5Model.h"
+
+1336410766 c:\skeletalanimation\spacetraveller\math\utility.h
+
+1336951940 c:\skeletalanimation\spacetraveller\md5animation.h
+	"Prerequisites.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1336956743 source:c:\skeletalanimation\spacetraveller\md5animation.cpp
+	"MD5Animation.h"
+
+1338157430 source:c:\skeletalanimation\spacetraveller - 1\application.cpp
+	"Application.h"
+
+1338066068 c:\skeletalanimation\spacetraveller - 1\application.h
+	<string>
+	"Graphics.h"
+	"KeyEventProcessor.h"
+	"math/Utility.h"
+	"Timer.h"
+
+1338173620 c:\skeletalanimation\spacetraveller - 1\graphics.h
+	"Prerequisites.h"
+	"Log.h"
+	"Shader.h"
+	"OpenGL.h"
+	"Window.h"
+	"Timer.h"
+	"Math/Utility.h"
+	"Math/Vector3D.h"
+	"Math/Matrix3D.h"
+	"Math/Matrix4D.h"
+	"Mesh.h"
+	"MD5Model.h"
+
+1338067303 c:\skeletalanimation\spacetraveller - 1\prerequisites.h
+	<cmath>
+	<cassert>
+	<stdexcept>
+	<cstdarg>
+	<cwchar>
+	<sstream>
+	<fstream>
+	<iostream>
+	<iomanip>
+	<string>
+	<list>
+	<vector>
+	<windows.h>
+
+1318431168 c:\skeletalanimation\spacetraveller - 1\log.h
+	"Prerequisites.h"
+
+1321460632 c:\skeletalanimation\spacetraveller - 1\shader.h
+	"OpenGL.h"
+	"Prerequisites.h"
+
+1335900306 c:\skeletalanimation\spacetraveller - 1\opengl.h
+	<windows.h>
+	<GL/gl.h>
+	"GL/glext.h"
+	"GL/wglext.h"
+	"Log.h"
+
+1304873130 c:\skeletalanimation\spacetraveller - 1\gl\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1304185023 c:\skeletalanimation\spacetraveller - 1\gl\wglext.h
+	<windows.h>
+
+1338067683 c:\skeletalanimation\spacetraveller - 1\window.h
+	"Prerequisites.h"
+	"KeyEventProcessor.h"
+
+1338066052 c:\skeletalanimation\spacetraveller - 1\keyeventprocessor.h
+	<string>
+
+1320146027 c:\skeletalanimation\spacetraveller - 1\timer.h
+	<windows.h>
+
+1336410766 c:\skeletalanimation\spacetraveller - 1\math\utility.h
+
+1336948474 c:\skeletalanimation\spacetraveller - 1\math\vector3d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+
+1327857879 c:\skeletalanimation\spacetraveller - 1\math\vector2d.h
+	<cmath>
+	<cassert>
+	<ostream>
+
+1333890590 c:\skeletalanimation\spacetraveller - 1\math\matrix3d.h
+	"Vector3D.h"
+
+1335816218 c:\skeletalanimation\spacetraveller - 1\math\matrix4d.h
+	"Vector4D.h"
+
+1327857835 c:\skeletalanimation\spacetraveller - 1\math\vector4d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+	"Vector3D.h"
+
+1327880034 c:\skeletalanimation\spacetraveller - 1\mesh.h
+	"math/Vector3D.h"
+
+1338073032 c:\skeletalanimation\spacetraveller - 1\md5model.h
+	"MD5Animation.h"
+	"Prerequisites.h"
+	"OpenGL.h"
+	"Shader.h"
+	"math/Matrix4D.h"
+	"math/Vector2D.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1336951940 c:\skeletalanimation\spacetraveller - 1\md5animation.h
+	"Prerequisites.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1336954870 c:\skeletalanimation\spacetraveller - 1\math\quaternion.h
+	<cmath>
+	<iostream>
+	"Vector3D.h"
+
+1338072123 source:c:\skeletalanimation\spacetraveller - 1\graphics.cpp
+	"Graphics.h"
+
+1337114519 source:c:\skeletalanimation\spacetraveller - 1\log.cpp
+	"Log.h"
+
+1336956743 source:c:\skeletalanimation\spacetraveller - 1\md5animation.cpp
+	"MD5Animation.h"
+
+1338169862 source:c:\skeletalanimation\spacetraveller - 1\md5model.cpp
+	"Log.h"
+	"MD5Model.h"
+
+1335900300 source:c:\skeletalanimation\spacetraveller - 1\opengl.cpp
+	"OpenGL.h"
+
+1321462062 source:c:\skeletalanimation\spacetraveller - 1\shader.cpp
+	"Shader.h"
+
+1338072659 source:c:\skeletalanimation\spacetraveller - 1\window.cpp
+	"Window.h"
+
+1338067704 source:c:\skeletalanimation\spacetraveller - 1\main.cpp
+	"Window.h"
+	"Graphics.h"
+	"Application.h"
+
+1321984599 source:c:\skeletalanimation\spacetraveller - 1\math\matrix2d.cpp
+	"Matrix2D.h"
+
+1321984555 c:\skeletalanimation\spacetraveller - 1\math\matrix2d.h
+	"Vector2D.h"
+
+1322388858 source:c:\skeletalanimation\spacetraveller - 1\math\matrix3d.cpp
+	"Matrix3D.h"
+
+1336411428 source:c:\skeletalanimation\spacetraveller - 1\math\matrix4d.cpp
+	<iostream>
+	"Matrix4D.h"
+
+1336954960 source:c:\skeletalanimation\spacetraveller - 1\math\quaternion.cpp
+	"Quaternion.h"
+
+1335709045 source:c:\skeletalanimation\spacetraveller - 1\math\vector2d.cpp
+	"Vector2D.h"
+
+1336948464 source:c:\skeletalanimation\spacetraveller - 1\math\vector3d.cpp
+	"Vector3D.h"
+
+1335709062 source:c:\skeletalanimation\spacetraveller - 1\math\vector4d.cpp
+	"Vector4D.h"
+
+1340536849 source:c:\skeletalanimation\spacetraveller - 1\timer.cpp
+	"Timer.h"
+
+1359306678 source:c:\skeletalanimation\spacetraveller - 2\application.cpp
+	<stdexcept>
+	"Application.h"
+	"Window.h"
+	"math/Utility.h"
+	<iostream>
+
+1359296581 c:\skeletalanimation\spacetraveller - 2\application.h
+	"Graphics.h"
+	"KeyEventProcessor.h"
+	"Timer.h"
+
+1359306403 c:\skeletalanimation\spacetraveller - 2\graphics.h
+	"MD5Model.h"
+
+1338067303 c:\skeletalanimation\spacetraveller - 2\prerequisites.h
+	<cmath>
+	<cassert>
+	<stdexcept>
+	<cstdarg>
+	<cwchar>
+	<sstream>
+	<fstream>
+	<iostream>
+	<iomanip>
+	<string>
+	<list>
+	<vector>
+	<windows.h>
+
+1359290084 c:\skeletalanimation\spacetraveller - 2\log.h
+	<string>
+	<vector>
+	<fstream>
+
+1359290269 c:\skeletalanimation\spacetraveller - 2\shader.h
+	"OpenGL.h"
+	"math/Matrix4D.h"
+
+1335900306 c:\skeletalanimation\spacetraveller - 2\opengl.h
+	<windows.h>
+	<GL/gl.h>
+	"GL/glext.h"
+	"GL/wglext.h"
+	"Log.h"
+
+1304873130 c:\skeletalanimation\spacetraveller - 2\gl\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1304185023 c:\skeletalanimation\spacetraveller - 2\gl\wglext.h
+	<windows.h>
+
+1359289557 c:\skeletalanimation\spacetraveller - 2\window.h
+	<windows.h>
+	"KeyEventProcessor.h"
+
+1359296137 c:\skeletalanimation\spacetraveller - 2\keyeventprocessor.h
+	<string>
+
+1359289895 c:\skeletalanimation\spacetraveller - 2\timer.h
+	<windows.h>
+
+1357218407 c:\skeletalanimation\spacetraveller - 2\math\utility.h
+
+1359310885 c:\skeletalanimation\spacetraveller - 2\math\vector3d.h
+	<ostream>
+	"Vector2D.h"
+
+1327857879 c:\skeletalanimation\spacetraveller - 2\math\vector2d.h
+	<cmath>
+	<cassert>
+	<ostream>
+
+1359302960 c:\skeletalanimation\spacetraveller - 2\math\matrix3d.h
+	"Vector3D.h"
+	"Matrix4D.h"
+
+1359301848 c:\skeletalanimation\spacetraveller - 2\math\matrix4d.h
+	"Vector4D.h"
+
+1359307276 c:\skeletalanimation\spacetraveller - 2\math\vector4d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+	"Vector3D.h"
+
+1357723738 c:\skeletalanimation\spacetraveller - 2\mesh.h
+	<string>
+
+1359401860 c:\skeletalanimation\spacetraveller - 2\md5model.h
+	"OpenGL.h"
+	"Shader.h"
+	"math/Matrix4D.h"
+	"math/Vector2D.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+	"MD5Animation.h"
+
+1359290438 c:\skeletalanimation\spacetraveller - 2\md5animation.h
+	<vector>
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1357514129 c:\skeletalanimation\spacetraveller - 2\math\quaternion.h
+	<ostream>
+	"Vector3D.h"
+
+1359401455 source:c:\skeletalanimation\spacetraveller - 2\graphics.cpp
+	<sstream>
+	<stdexcept>
+	"Graphics.h"
+	"Window.h"
+	"math/Utility.h"
+	<iostream>
+
+1359290174 source:c:\skeletalanimation\spacetraveller - 2\log.cpp
+	<windows.h>
+	<iomanip>
+	<sstream>
+	"Log.h"
+
+1359290488 source:c:\skeletalanimation\spacetraveller - 2\md5animation.cpp
+	<fstream>
+	<stdexcept>
+	"MD5Animation.h"
+
+1359402810 source:c:\skeletalanimation\spacetraveller - 2\md5model.cpp
+	<stdexcept>
+	"Log.h"
+	"MD5Model.h"
+	"math/Utility.h"
+	<iostream>
+
+1335900300 source:c:\skeletalanimation\spacetraveller - 2\opengl.cpp
+	"OpenGL.h"
+
+1359290568 source:c:\skeletalanimation\spacetraveller - 2\shader.cpp
+	<stdexcept>
+	"Shader.h"
+
+1340536849 source:c:\skeletalanimation\spacetraveller - 2\timer.cpp
+	"Timer.h"
+
+1359296351 source:c:\skeletalanimation\spacetraveller - 2\window.cpp
+	<windows.h>
+	<windowsx.h>
+	<iostream>
+	"Window.h"
+
+1321984599 source:c:\skeletalanimation\spacetraveller - 2\math\matrix2d.cpp
+	"Matrix2D.h"
+
+1321984555 c:\skeletalanimation\spacetraveller - 2\math\matrix2d.h
+	"Vector2D.h"
+
+1359302828 source:c:\skeletalanimation\spacetraveller - 2\math\matrix3d.cpp
+	"Matrix3D.h"
+
+1359306270 source:c:\skeletalanimation\spacetraveller - 2\math\matrix4d.cpp
+	<iomanip>
+	<iostream>
+	"Matrix4D.h"
+	"Matrix3D.h"
+	"Utility.h"
+
+1357514114 source:c:\skeletalanimation\spacetraveller - 2\math\quaternion.cpp
+	<cmath>
+	<fstream>
+	"Quaternion.h"
+
+1335709045 source:c:\skeletalanimation\spacetraveller - 2\math\vector2d.cpp
+	"Vector2D.h"
+
+1359310969 source:c:\skeletalanimation\spacetraveller - 2\math\vector3d.cpp
+	<cmath>
+	<fstream>
+	<cassert>
+	"Vector3D.h"
+
+1335709062 source:c:\skeletalanimation\spacetraveller - 2\math\vector4d.cpp
+	"Vector4D.h"
+
+1362775641 source:c:\skeletalanimation\spacetraveller - 2\main.cpp
+	<stdexcept>
+	"Window.h"
+	"Application.h"
+
+1357585178 source:c:\skeletalanimation\spacetraveller - 2\joint.cpp
+	<cassert>
+	"Joint.h"
+
+1357585209 c:\skeletalanimation\spacetraveller - 2\joint.h
+	<string>
+	<vector>
+	"Weight.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1357348231 c:\skeletalanimation\spacetraveller - 2\weight.h
+
+1357348123 source:c:\skeletalanimation\spacetraveller - 2\vertex.cpp
+	"Vertex.h"
+
+1357348169 c:\skeletalanimation\spacetraveller - 2\vertex.h
+
+1357348276 source:c:\skeletalanimation\spacetraveller - 2\weight.cpp
+	"Weight.h"
+
+1357585136 source:c:\skeletalanimation\spacetraveller - 2\skeleton.cpp
+	"Skeleton.h"
+
+1358089232 c:\skeletalanimation\spacetraveller - 2\skeleton.h
+	<string>
+	<vector>
+	"Joint.h"
+
+1357723265 source:c:\skeletalanimation\spacetraveller - 2\mesh.cpp
+	"Mesh.h"
+
