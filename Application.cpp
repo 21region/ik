@@ -11,18 +11,13 @@ namespace ST
     Application::Application()
         : lbutton_down(false)
     {
-        graphics = new Graphics();
+        graphics.SetCamera(&camera);
         timer.Reset();
         ShowWindow(MainWindow->GetHandle(), SW_NORMAL);
     }
 
     Application::~Application()
     {
-        if (graphics)
-        {
-            delete graphics;
-            graphics = 0;
-        }
     }
 
     int Application::Run()
@@ -51,20 +46,12 @@ namespace ST
     //-------------- Draw a scene to the backbuffer --------------//
     void Application::logic()
     {
-        //graphics->Update(timer.ElapsedTime());
         timer.Reset();
-        graphics->DrawScene();
+        graphics.DrawScene();
     }
 
     void Application::KeyDown(int key)
     {
-        // VK_LEFT
-//        if (key == VK_RIGHT)
-//            graphics->Rotate(Math::DEG_2_RAD);
-//        else if (key == VK_LEFT)
-//            graphics->Rotate(-Math::DEG_2_RAD);
-//        else if (key == 74) // 'J'
-//            graphics->AffectJoint();
     }
 
     void Application::LButtonDown(size_t x, size_t y)
@@ -84,7 +71,7 @@ namespace ST
         if (ext == ".md5mesh")
         {
             model.LoadModel(filename + ext);
-            graphics->LoadModel(model.GetPositions(),
+            graphics.LoadModel(model.GetPositions(),
                                 model.GetNormals(), model.GetIndices());
         }
         else MessageBox(0, TEXT("File isn't a model or an animation."),

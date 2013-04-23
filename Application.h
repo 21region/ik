@@ -5,6 +5,7 @@
 #include "KeyEventProcessor.h"
 #include "Timer.h"
 #include "Model.h"
+#include "Camera.h"
 
 namespace ST
 {
@@ -28,7 +29,8 @@ namespace ST
         bool lbutton_down;
         Timer timer;
         Model model;
-        Graphics* graphics;
+        Camera camera;
+        Graphics graphics;
     };
 }
 

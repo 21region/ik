@@ -747,23 +747,25 @@
 1357723265 source:c:\skeletalanimation\spacetraveller - 2\mesh.cpp
 	"Mesh.h"
 
-1366708885 source:c:\skeletalanimation\ik\application.cpp
+1366720285 source:c:\skeletalanimation\ik\application.cpp
 	<iostream>
 	<stdexcept>
 	"Application.h"
 	"Window.h"
 	"math/Utility.h"
 
-1366706140 c:\skeletalanimation\ik\application.h
+1366720233 c:\skeletalanimation\ik\application.h
 	"Graphics.h"
 	"KeyEventProcessor.h"
 	"Timer.h"
 	"Model.h"
+	"Camera.h"
 
-1366632032 c:\skeletalanimation\ik\graphics.h
+1366719763 c:\skeletalanimation\ik\graphics.h
 	<vector>
 	"OpenGL.h"
 	"Shader.h"
+	"Camera.h"
 	"math/Vector3D.h"
 
 1366318789 c:\skeletalanimation\ik\md5model.h
@@ -844,7 +846,7 @@
 
 1366126857 c:\skeletalanimation\ik\math\utility.h
 
-1366708806 source:c:\skeletalanimation\ik\graphics.cpp
+1366720091 source:c:\skeletalanimation\ik\graphics.cpp
 	<sstream>
 	<stdexcept>
 	"Graphics.h"
@@ -953,4 +955,10 @@
 	<vector>
 	"MD5Parser.h"
 	"math/Vector3D.h"
+
+1366718621 source:c:\skeletalanimation\ik\camera.cpp
+	"Camera.h"
+
+1366717051 c:\skeletalanimation\ik\camera.h
+	"math/Matrix4D.h"
 

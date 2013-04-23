@@ -4,6 +4,7 @@
 #include <vector>
 #include "OpenGL.h"
 #include "Shader.h"
+#include "Camera.h"
 #include "math/Vector3D.h"
 
 namespace ST
@@ -15,14 +16,16 @@ namespace ST
         virtual ~Graphics();
 
         void DrawScene();
+        void SetCamera(const Camera* camera);
         void LoadModel(const std::vector<Math::Vector3D>&,
                        const std::vector<Math::Vector3D>&,
                        const std::vector<size_t>&);
 
     protected:
-        void createContext();
-        void initShaders();
-        void initOpenGL();
+        void create_context();
+        void init_shaders();
+        void init_opengl();
+        void init_light() const;
 
         void errorThrow(std::string);
 
@@ -45,6 +48,7 @@ namespace ST
         Math::Matrix4D viewTrans;
         Math::Matrix4D invProj;
         Math::Matrix4D invView;
+        const Camera* camera;
     };
 }
 

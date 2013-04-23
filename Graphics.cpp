@@ -13,9 +13,10 @@ namespace ST
     //-------------- Graphics constructor --------------//
     Graphics::Graphics() : loaded(false)
     {
-        createContext();
-        initOpenGL();
-        initShaders();
+        create_context();
+        init_opengl();
+        init_shaders();
+        init_light();
 
         OPENGL_CHECK_FOR_ERRORS();
     }
@@ -25,8 +26,17 @@ namespace ST
     {
     }
 
+    void Graphics::SetCamera(const Camera* cam)
+    {
+        camera = cam;
+        size_t location = shader.GetUniformLocation("view");
+        glUniformMatrix4fv(location, 1, GL_FALSE, &camera->GetView()[0]);
+        location = shader.GetUniformLocation("projection");
+        glUniformMatrix4fv(location, 1, GL_FALSE, &camera->GetProjection()[0]);
+    }
+
     //-------------- Init processing shaders --------------//
-    void Graphics::initOpenGL()
+    void Graphics::init_opengl()
     {
         glViewport(0, 0, 800, 600);
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -41,31 +51,21 @@ namespace ST
     }
 
     //-------------- Init processing shaders --------------//
-    void Graphics::initShaders()
+    void Graphics::init_shaders()
     {
         shader.CreateShader(GL_VERTEX_SHADER, "data/shaders/main.vert");
         shader.CreateShader(GL_FRAGMENT_SHADER, "data/shaders/main.frag");
         shader.CreateProgram();
         shader.Activate();
 
-        // Set projection matrix.
-        GLint projLocation = shader.GetUniformLocation("projection");
-        Matrix4D projTrans =
-            Matrix4D::ProjectionMatrix(45.0f, float(width) / height, 1, 1000);
-        glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projTrans[0]);
-        invProj = Matrix4D::Inverse(projTrans);
-        invView = Matrix4D::Identity();
-
-        // Set view matrix;
-        viewLocation = shader.GetUniformLocation("view");
-        glUniformMatrix4fv(viewLocation, 1, GL_FALSE, &viewTrans[0]);
-
         // REMOVE!!!
         Matrix4D model = Matrix4D::MakeTranslate(0, -50, -150) * Matrix4D::MakeRotX(-PI / 2);
         glUniformMatrix4fv(shader.GetUniformLocation("model"), 1, GL_FALSE, &model[0]);
         ////////////
+    }
 
-        // Set the light.
+    void Graphics::init_light() const
+    {
         GLint dirLocation = shader.GetUniformLocation("dirToLight");
         GLint colorLocation = shader.GetUniformLocation("lightColor");
         glUniform3f(dirLocation, 0, 0, 1);
@@ -119,7 +119,7 @@ namespace ST
     }
 
     //-------------- OpenGL context creation --------------//
-    void Graphics::createContext()
+    void Graphics::create_context()
     {
         // Get a handle to a display device context.
         hdc  = ::GetDC(MainWindow->GetHandle());

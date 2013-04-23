@@ -39,6 +39,8 @@
 		</Linker>
 		<Unit filename="Application.cpp" />
 		<Unit filename="Application.h" />
+		<Unit filename="Camera.cpp" />
+		<Unit filename="Camera.h" />
 		<Unit filename="GL/glext.h" />
 		<Unit filename="GL/wglext.h" />
 		<Unit filename="Graphics.cpp" />
