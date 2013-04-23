@@ -1,8 +1,8 @@
+#include <iostream>
 #include <stdexcept>
 #include "Application.h"
 #include "Window.h"
 #include "math/Utility.h"
-#include <iostream>
 
 using namespace std;
 
@@ -41,7 +41,7 @@ namespace ST
             else
             {
                 Sleep(1);
-                gameLogic();
+                logic();
             }
         }
 
@@ -49,64 +49,45 @@ namespace ST
     }
 
     //-------------- Draw a scene to the backbuffer --------------//
-    void Application::gameLogic()
+    void Application::logic()
     {
-        graphics->Update(timer.ElapsedTime());
+        //graphics->Update(timer.ElapsedTime());
         timer.Reset();
-
         graphics->DrawScene();
     }
 
     void Application::KeyDown(int key)
     {
         // VK_LEFT
-        if (key == VK_RIGHT)
-            graphics->Rotate(Math::DEG_2_RAD);
-        else if (key == VK_LEFT)
-            graphics->Rotate(-Math::DEG_2_RAD);
-        else if (key == 74) // 'J'
-            graphics->AffectJoint();
+//        if (key == VK_RIGHT)
+//            graphics->Rotate(Math::DEG_2_RAD);
+//        else if (key == VK_LEFT)
+//            graphics->Rotate(-Math::DEG_2_RAD);
+//        else if (key == 74) // 'J'
+//            graphics->AffectJoint();
     }
 
     void Application::LButtonDown(size_t x, size_t y)
     {
-        lbutton_down = true;
-        graphics->GetJoint(x, y);
     }
 
     void Application::LButtonUp(size_t x, size_t y)
     {
-        lbutton_down = false;
     }
 
     void Application::MouseMove(size_t x, size_t y)
     {
-        if (lbutton_down)
-        {
-        }
     }
 
-    void Application::FileDropped(const string& fileName, const string& ext)
+    void Application::FileDropped(const string& filename, const string& ext)
     {
         if (ext == ".md5mesh")
         {
-            graphics->AddModel(fileName + ext);
+            model.LoadModel(filename + ext);
+            graphics->LoadModel(model.GetPositions(),
+                                model.GetNormals(), model.GetIndices());
         }
-        else if (ext == ".md5anim")
-        {
-            try
-            {
-                graphics->AddAnimation(fileName + ext);
-            }
-            catch (const runtime_error& msg)
-            {
-                MessageBox(0, msg.what(), TEXT("ERROR"), MB_OK);
-            }
-        }
-        else
-        {
-            MessageBox(0, TEXT("File isn't a model or an animation."),
-                TEXT("ERROR"), MB_OK);
-        }
+        else MessageBox(0, TEXT("File isn't a model or an animation."),
+                        TEXT("ERROR"), MB_OK);
     }
 }

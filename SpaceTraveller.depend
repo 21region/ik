@@ -747,3 +747,210 @@
 1357723265 source:c:\skeletalanimation\spacetraveller - 2\mesh.cpp
 	"Mesh.h"
 
+1366708885 source:c:\skeletalanimation\ik\application.cpp
+	<iostream>
+	<stdexcept>
+	"Application.h"
+	"Window.h"
+	"math/Utility.h"
+
+1366706140 c:\skeletalanimation\ik\application.h
+	"Graphics.h"
+	"KeyEventProcessor.h"
+	"Timer.h"
+	"Model.h"
+
+1366632032 c:\skeletalanimation\ik\graphics.h
+	<vector>
+	"OpenGL.h"
+	"Shader.h"
+	"math/Vector3D.h"
+
+1366318789 c:\skeletalanimation\ik\md5model.h
+	"OpenGL.h"
+	"Shader.h"
+	"math/Matrix4D.h"
+	"math/Vector2D.h"
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+	"MD5Animation.h"
+
+1366126857 c:\skeletalanimation\ik\opengl.h
+	<windows.h>
+	<GL/gl.h>
+	"GL/glext.h"
+	"GL/wglext.h"
+	"Log.h"
+
+1366126857 c:\skeletalanimation\ik\gl\glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1366126857 c:\skeletalanimation\ik\gl\wglext.h
+	<windows.h>
+
+1366126857 c:\skeletalanimation\ik\log.h
+	<string>
+	<vector>
+	<fstream>
+
+1366126857 c:\skeletalanimation\ik\shader.h
+	"OpenGL.h"
+	"math/Matrix4D.h"
+
+1366126857 c:\skeletalanimation\ik\math\matrix4d.h
+	"Vector4D.h"
+
+1366126857 c:\skeletalanimation\ik\math\vector4d.h
+	<cmath>
+	<cassert>
+	<ostream>
+	"Vector2D.h"
+	"Vector3D.h"
+
+1366126857 c:\skeletalanimation\ik\math\vector2d.h
+	<cmath>
+	<cassert>
+	<ostream>
+
+1366126857 c:\skeletalanimation\ik\math\vector3d.h
+	<ostream>
+	"Vector2D.h"
+
+1366700874 c:\skeletalanimation\ik\math\quaternion.h
+	<ostream>
+	"Vector3D.h"
+
+1366126857 c:\skeletalanimation\ik\md5animation.h
+	<vector>
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1366126857 c:\skeletalanimation\ik\keyeventprocessor.h
+	<string>
+
+1366126857 c:\skeletalanimation\ik\timer.h
+	<windows.h>
+
+1366126857 c:\skeletalanimation\ik\window.h
+	<windows.h>
+	"KeyEventProcessor.h"
+
+1366126857 c:\skeletalanimation\ik\math\utility.h
+
+1366708806 source:c:\skeletalanimation\ik\graphics.cpp
+	<sstream>
+	<stdexcept>
+	"Graphics.h"
+	"Window.h"
+	"math/Utility.h"
+	<iostream>
+
+1366126857 source:c:\skeletalanimation\ik\log.cpp
+	<windows.h>
+	<iomanip>
+	<sstream>
+	"Log.h"
+
+1366706304 source:c:\skeletalanimation\ik\main.cpp
+	<stdexcept>
+	"Window.h"
+	"Application.h"
+	"MD5Parser.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\matrix2d.cpp
+	"Matrix2D.h"
+
+1366126857 c:\skeletalanimation\ik\math\matrix2d.h
+	"Vector2D.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\matrix3d.cpp
+	"Matrix3D.h"
+
+1366126857 c:\skeletalanimation\ik\math\matrix3d.h
+	"Vector3D.h"
+	"Matrix4D.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\matrix4d.cpp
+	<iomanip>
+	<iostream>
+	"Matrix4D.h"
+	"Matrix3D.h"
+	"Utility.h"
+
+1366700895 source:c:\skeletalanimation\ik\math\quaternion.cpp
+	<cmath>
+	<fstream>
+	"Quaternion.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\vector2d.cpp
+	"Vector2D.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\vector3d.cpp
+	<cmath>
+	<fstream>
+	<cassert>
+	"Vector3D.h"
+
+1366126857 source:c:\skeletalanimation\ik\math\vector4d.cpp
+	"Vector4D.h"
+
+1366126857 source:c:\skeletalanimation\ik\md5animation.cpp
+	<fstream>
+	<stdexcept>
+	"MD5Animation.h"
+
+1366318829 source:c:\skeletalanimation\ik\md5model.cpp
+	<stdexcept>
+	"Log.h"
+	"MD5Model.h"
+	"math/Utility.h"
+	<iostream>
+
+1366126857 source:c:\skeletalanimation\ik\opengl.cpp
+	"OpenGL.h"
+
+1366126857 source:c:\skeletalanimation\ik\shader.cpp
+	<stdexcept>
+	"Shader.h"
+
+1366126857 source:c:\skeletalanimation\ik\timer.cpp
+	"Timer.h"
+
+1366126857 source:c:\skeletalanimation\ik\window.cpp
+	<windows.h>
+	<windowsx.h>
+	<iostream>
+	"Window.h"
+
+1366703451 source:c:\skeletalanimation\ik\md5parser.cpp
+	"MD5Parser.h"
+	"Log.h"
+	<sstream>
+	<fstream>
+	<iostream>
+	<tuple>
+
+1366704361 c:\skeletalanimation\ik\md5parser.h
+	<vector>
+	<string>
+	<functional>
+	"math/Vector3D.h"
+	"math/Quaternion.h"
+
+1366707153 source:c:\skeletalanimation\ik\model.cpp
+	"Model.h"
+	<iostream>
+
+1366705807 c:\skeletalanimation\ik\model.h
+	<string>
+	<vector>
+	"MD5Parser.h"
+	"math/Vector3D.h"
+

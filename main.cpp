@@ -1,6 +1,7 @@
 #include <stdexcept>
 #include "Window.h"
 #include "Application.h"
+#include "MD5Parser.h"
 
 using namespace ST;
 using namespace std;

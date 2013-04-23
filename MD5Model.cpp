@@ -23,12 +23,12 @@ namespace ST
         }
     }
 
-    Joint& MD5Model::GetJoint(size_t i)
+    MD5Model::Joint& MD5Model::GetJoint(size_t i)
     {
         return joints[i];
     }
 
-    JointList& MD5Model::GetSkeleton()
+    MD5Model::JointList& MD5Model::GetSkeleton()
     {
         return joints;
     }

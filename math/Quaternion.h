@@ -55,10 +55,12 @@ namespace Math
 
         void Normalize();
         void ComputeW();
+        float ComputeW(float x, float y, float z) const;
 
         static float Dot(const Quaternion& a, const Quaternion& b);
         static Quaternion Slerp(const Quaternion& a, const Quaternion& b,
                                 float quotient);
+        static Vector3D Rotate(float, float, float, float, float, float);
 
         friend std::ostream& operator<< (std::ostream&, const Quaternion&);
         friend std::ifstream& operator>> (std::ifstream&, Quaternion&);

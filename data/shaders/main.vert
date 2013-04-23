@@ -1,4 +1,4 @@
-#version 330
+#version 130
 
 uniform vec3 lightColor;
 uniform vec3 dirToLight;

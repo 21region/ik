@@ -11,18 +11,18 @@
 
 namespace ST
 {
-    struct Joint
-    {
-        std::string name;
-        int parentID;
-        Math::Vector3D pos;
-        Math::Quaternion orient;
-    };
-    typedef std::vector<Joint> JointList;
-
     class MD5Model
     {
     public:
+        struct Joint
+        {
+            std::string name;
+            int parentID;
+            Math::Vector3D pos;
+            Math::Quaternion orient;
+        };
+        typedef std::vector<Joint> JointList;
+
         MD5Model();
         virtual ~MD5Model();
 

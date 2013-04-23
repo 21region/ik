@@ -11,7 +11,7 @@ using namespace Math;
 namespace ST
 {
     //-------------- Graphics constructor --------------//
-    Graphics::Graphics() : model(0), angle(0)  // Should not be here.
+    Graphics::Graphics() : loaded(false)
     {
         createContext();
         initOpenGL();
@@ -23,11 +23,6 @@ namespace ST
     //-------------- Graphics destructor --------------//
     Graphics::~Graphics()
     {
-        if (model)
-        {
-            delete model;
-            model = 0;
-        }
     }
 
     //-------------- Init processing shaders --------------//
@@ -65,6 +60,11 @@ namespace ST
         viewLocation = shader.GetUniformLocation("view");
         glUniformMatrix4fv(viewLocation, 1, GL_FALSE, &viewTrans[0]);
 
+        // REMOVE!!!
+        Matrix4D model = Matrix4D::MakeTranslate(0, -50, -150) * Matrix4D::MakeRotX(-PI / 2);
+        glUniformMatrix4fv(shader.GetUniformLocation("model"), 1, GL_FALSE, &model[0]);
+        ////////////
+
         // Set the light.
         GLint dirLocation = shader.GetUniformLocation("dirToLight");
         GLint colorLocation = shader.GetUniformLocation("lightColor");
@@ -72,72 +72,33 @@ namespace ST
         glUniform3f(colorLocation, 1, 1, 1);
     }
 
-    //-------------- Rotate object --------------//
-    void Graphics::Rotate(float angle)
+    void Graphics::LoadModel(const vector<Vector3D>& position,
+                             const vector<Vector3D>& normal,
+                             const vector<size_t>& indices)
     {
-        this->angle += angle;
-
-        if (this->angle >= 2 * PI)
-            this->angle -= 2 * PI;
-        else if (this->angle <= -2 * PI)
-            this->angle += 2 * PI;
-
-        //shader.SetUniformMatrix("view", Matrix4D::MakeRotY(-this->angle));
-        if (model)
+        if (!loaded)
         {
-            Matrix4D m = model->GetModelTrans() *
-                         Matrix4D::MakeRotZ(this->angle);
-            shader.SetUniformMatrix("model", m);
-        }
-    }
-
-    //-------------- Test how joint can be changed --------------//
-    void Graphics::AffectJoint()
-    {
-        if (model)
-            model->AffectJoint();
-    }
-
-    //-------------- Returns index of the found joint --------------//
-    int Graphics::GetJoint(size_t x, size_t y)
-    {
-        float x_clip = 2.0f * x / width - 1;
-        float y_clip = 1 - 2.0f * y / height;
-
-        Vector4D pick_ray = invProj * Vector4D(x_clip, y_clip, 0, 1);
-        pick_ray[0] /= pick_ray[3];
-        pick_ray[1] /= pick_ray[3];
-        pick_ray[2] /= pick_ray[3];
-        pick_ray[3] /= pick_ray[3];
-
-        return -1;
-    }
-
-    //-------------- Update the scene --------------//
-    void Graphics::Update(float deltaTimeSec)
-    {
-        if (model)
-            model->Update(deltaTimeSec);
-    }
-
-    //-------------- Load and place model in a scene --------------//
-    void Graphics::AddModel(const string& fileName)
-    {
-        if (model)
-        {
-            delete model;
-            model = 0;
+            loaded = true;
+            num_indices = indices.size();
+            glGenBuffers(3, vbo);
+            glGenVertexArrays(1, &vao);
+            glBindVertexArray(vao);
         }
 
-        model = new MD5Model();
-        model->Load(fileName, shader);
-    }
-
-    //-------------- Load animation for existing model --------------//
-    void Graphics::AddAnimation(const std::string& fileName)
-    {
-        if (model)
-            model->LoadAnim(fileName);
+        string attrib_names[] = { "position", "normal" };
+        const vector<Vector3D>* data[] = { &position, &normal };
+        for (size_t i = 0; i < sizeof(attrib_names) / sizeof(string); i++)
+        {
+            glBindBuffer(GL_ARRAY_BUFFER, vbo[i]);
+            glBufferData(GL_ARRAY_BUFFER, data[i]->size() * sizeof(Vector3D),
+                         &data[i]->front(), GL_STREAM_DRAW);
+            GLint location = shader.GetAttribLocation(attrib_names[i]);
+            glEnableVertexAttribArray(location);
+            glVertexAttribPointer(location, 3, GL_FLOAT, 0, sizeof(Vector3D), 0);
+        }
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo[2]);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(size_t),
+                     &indices[0], GL_STATIC_DRAW);
     }
 
     //-------------- Game logic --------------//
@@ -145,8 +106,12 @@ namespace ST
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        if (model)
-            model->Draw(true);
+        if (loaded)
+        {
+            glBindVertexArray(vao);
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo[2]);
+            glDrawElements(GL_TRIANGLES, num_indices, GL_UNSIGNED_INT, 0);
+        }
 
         SwapBuffers(hdc);
 

@@ -1,7 +1,10 @@
 #ifndef GRAPHICS_H_INCLUDED
 #define GRAPHICS_H_INCLUDED
 
-#include "MD5Model.h"
+#include <vector>
+#include "OpenGL.h"
+#include "Shader.h"
+#include "math/Vector3D.h"
 
 namespace ST
 {
@@ -12,13 +15,9 @@ namespace ST
         virtual ~Graphics();
 
         void DrawScene();
-        void AddModel(const std::string& fileName);
-        void AddAnimation(const std::string& fileName);
-        void Update(float deltaTimeSec);
-
-        void Rotate(float angle);
-        void AffectJoint();
-        int GetJoint(size_t x, size_t y);
+        void LoadModel(const std::vector<Math::Vector3D>&,
+                       const std::vector<Math::Vector3D>&,
+                       const std::vector<size_t>&);
 
     protected:
         void createContext();
@@ -34,11 +33,16 @@ namespace ST
         HDC       hdc;          // Handle to Device Context.
         HGLRC     hglrc;        // OpenGL handle.
         Shader    shader;       // Processing shader.
-        MD5Model* model;        // Rendered model.
 
-        float angle;               // Should be in Camera class.
-        GLint viewLocation;        //
-        Math::Matrix4D viewTrans;  //
+        bool loaded;
+        size_t num_indices;
+        GLuint    vao; // OpenGL buffers for single model.
+        GLuint    vbo[3]; // If there will be more than 1 model
+        // then there is a need to do this: graphics->GetDrawableModel(model);
+        // GetDrawableModel() should wrap model so that it can be rendered.
+
+        GLint viewLocation;
+        Math::Matrix4D viewTrans;
         Math::Matrix4D invProj;
         Math::Matrix4D invView;
     };

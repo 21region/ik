@@ -4,6 +4,7 @@
 #include "Graphics.h"
 #include "KeyEventProcessor.h"
 #include "Timer.h"
+#include "Model.h"
 
 namespace ST
 {
@@ -17,15 +18,16 @@ namespace ST
         virtual void LButtonUp(size_t x, size_t y);
         virtual void MouseMove(size_t x, size_t y);
         virtual void KeyDown(int key);
-        virtual void FileDropped(const std::string& fileName,
+        virtual void FileDropped(const std::string& filename,
                                  const std::string& ext);
         int Run();
 
     private:
-        void gameLogic();
+        void logic();
 
         bool lbutton_down;
         Timer timer;
+        Model model;
         Graphics* graphics;
     };
 }

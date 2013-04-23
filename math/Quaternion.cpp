@@ -115,10 +115,28 @@ namespace Math
     {
         float t = 1.0 - x * x - y * y - z * z;
 
-        if (t < 0.0f)
-            w = 0;
-        else
-            w = -sqrt(t);
+        if (t < 0.0f) w = 0;
+        else w = -sqrt(t);
+    }
+
+    //--------- Compute w coordinate of unit quaternion ---------//
+    float Quaternion::ComputeW(float x, float y, float z) const
+    {
+        float t = 1.0 - x * x - y * y - z * z;
+
+        if (t < 0.0f) return 0;
+        return -sqrt(t);
+    }
+
+    Vector3D Quaternion::Rotate(float x, float y, float z,
+                                float i, float j, float k)
+    {
+        Quaternion p(0, i, j, k);
+        Quaternion q(0, x, y, z);
+        p.ComputeW();
+
+        Quaternion res = p * q * p.Conjugate();
+        return Vector3D(res.x, res.y, res.z);
     }
 
     float Quaternion::Dot(const Quaternion& a, const Quaternion& b)
